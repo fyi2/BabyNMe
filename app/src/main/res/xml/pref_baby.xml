@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:defaultValue="Name"
+        android:key="baby_name"
+        android:title="Baby's Name" />
+    <EditTextPreference
+        android:defaultValue="01/01/01"
+        android:key="baby_dob"
+        android:title="Baby's Birthday" />
+    <EditTextPreference
+        android:defaultValue="21"
+        android:key="mum_age"
+        android:singleLine="true"
+        android:title="Your age" />
+</PreferenceScreen>

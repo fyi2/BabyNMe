@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.sherman.android.babynme.Fragments.BabyDobFragment">
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Baby's Birthday"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tvBabyBday"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etBabyDob"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_below="@+id/tvBabyBday"
+            android:singleLine="true"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="loadAge"
+            android:text="Next Question (2/3)"
+            android:layout_below="@+id/etBabyDob"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

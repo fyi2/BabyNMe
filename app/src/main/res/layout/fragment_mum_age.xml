@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.sherman.android.babynme.Fragments.MumAgeFragment">
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mother's age"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tvMumAge"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etMumAge"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_below="@+id/tvMumAge"
+            android:singleLine="true"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="homeScreen"
+            android:text="And we're done (3/3)"
+            android:layout_below="@+id/etMumAge"/>
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
