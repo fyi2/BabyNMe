@@ -23,13 +23,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <Button
+            android:id="@+id/btnResetSharedPreferences"
+            style="@style/RoundedCornerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnResetSharedPreferences"
-            android:text="Reset Shared Preferences"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="26dp"
             android:clickable="true"
+            android:elevation="6dp"
             android:onClick="resetSharedPreferences"
-            />
+            android:padding="20dp"
+            android:text="Reset Shared Preferences"
+            android:textColor="#000000"
+            android:translationZ="4dp" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

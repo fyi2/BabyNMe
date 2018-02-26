@@ -8,10 +8,12 @@ import android.preference.PreferenceManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import io.realm.Realm
 import org.sherman.android.babynme.Data.SHARED_PREFERENCE
 import org.sherman.android.babynme.R
 
 class MainActivity : AppCompatActivity() {
+    lateinit var realm:Realm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         val babyName:String = sharedPreferences.getString("baby_name", "Baby")
         sharedPreferences.edit().putString("baby_name", babyName).apply()
+        realm = Realm.getDefaultInstance()
 
 
     }
@@ -31,29 +34,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.main_menu, menu)
-
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-
-        when(item?.itemId){
-            (R.id.menu_settings)-> {
-                loadSettings()
-            }
-            else -> {
-                loadSettings()
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    fun loadSettings(){
-        val intent = Intent(this, SettingsActivity::class.java)
-        startActivity(intent)
+    override fun onDestroy() {
+        realm.close()
+        super.onDestroy()
     }
 
     fun test(view: View){
@@ -61,9 +44,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun defaultSetup(){
-        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-    }
 
     fun nextStep(view: View){
         val sharedPreferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)

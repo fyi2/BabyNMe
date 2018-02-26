@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg_standard"
     tools:context="org.sherman.android.babynme.Fragments.BabyNameFragment">
 
         <ListView
@@ -34,13 +34,18 @@
 
         <Button
             android:id="@+id/button"
+            style="@style/RoundedCornerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="#000000"
+            android:translationZ="4dp"
+            android:elevation="6dp"
             android:clickable="true"
             android:onClick="loadDob"
             android:text="Next Question (1/3)"
             android:layout_below="@+id/etBabyName"/>
+
 
 
     </RelativeLayout>

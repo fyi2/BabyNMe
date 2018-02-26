@@ -1,5 +1,6 @@
 package org.sherman.android.babynme.Activites
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -29,7 +30,10 @@ class SettingsActivity : AppCompatActivity(){
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         val id = item?.itemId
         if(id == android.R.id.home){
-            NavUtils.navigateUpFromSameTask(this)
+            //NavUtils.navigateUpFromSameTask(this)
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
         }
         return super.onOptionsItemSelected(item)
     }

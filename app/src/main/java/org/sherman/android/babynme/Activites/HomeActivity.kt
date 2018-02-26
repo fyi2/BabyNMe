@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import org.sherman.android.babynme.R
 
 class HomeActivity : AppCompatActivity() {
@@ -46,6 +47,24 @@ class HomeActivity : AppCompatActivity() {
 
     fun loadSettings(){
         val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun test(view: View){
+        val intent = Intent(this, TestActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun wellness(view: View){
+
+    }
+
+    fun feedingHydration(view: View){
+
+    }
+
+    fun sleep(view: View){
+        val intent = Intent(this, SleepTrackerActivity::class.java)
         startActivity(intent)
     }
 }

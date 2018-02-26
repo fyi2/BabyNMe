@@ -3,6 +3,7 @@
     package="org.sherman.android.babynme">
 
     <application
+        android:name=".BabyNMeApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,7 +24,8 @@
             android:parentActivityName=".Activites.MainActivity" />
         <activity android:name=".Activites.TestActivity" />
         <activity android:name=".Activites.WelcomeActivity" />
-        <activity android:name=".Activites.HomeActivity"></activity>
+        <activity android:name=".Activites.HomeActivity" />
+        <activity android:name=".Activites.SleepTrackerActivity"></activity>
     </application>
 
 </manifest>

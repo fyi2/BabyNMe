@@ -12,7 +12,8 @@
     </ListView>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_standard">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,9 +35,13 @@
 
         <Button
             android:id="@+id/button"
+            style="@style/RoundedCornerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="#000000"
+            android:translationZ="4dp"
+            android:elevation="6dp"
             android:clickable="true"
             android:onClick="loadAge"
             android:text="Next Question (2/3)"

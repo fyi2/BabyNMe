@@ -22,7 +22,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
 
-        // Add in the recyclerAdapter
+        // Add in the fragmentAdapter
         val adapter = InitialFlowAdapter(supportFragmentManager)
         pager = swipe_area as ViewPager
 
